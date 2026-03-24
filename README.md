@@ -1,2 +1,16 @@
 # vehicle-explorer-project.
-Vehicle Explorer is a web app that helps users search vehicle models by manufacturer and compare them. It provides a simple interface to view and sort vehicle data using a public API.
+This is a simple web app where you can search for vehicle models by entering a manufacturer name (like Toyota or Honda). It shows a list of models and lets you compare any two of them.
+
+
+
+# API Used
+NHTSA Vehicle API (vPIC)
+https://vpic.nhtsa.dot.gov/api/
+
+
+
+# Features
+. Search vehicles by manufacturer
+. View list of models
+. Compare two vehicles
+. Sort models alphabetically

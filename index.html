@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        
+        <!-- Logo -->
+        <div class="nav-left">
+            <img src="assests/Gemini_Generated_Image_ko7578ko7578ko75 (1).png" alt="logo" class="logo">
+        </div>
+
+        <!-- Title -->
+        <div class="nav-center">
+            <h1 class="nav-title">Vehicle Explorer</h1>
+        </div>
+
+        <!-- Links -->
+        <div class="nav-right">
+            <a href="#">Home</a>
+            <a href="#">Search</a>
+            <a href="#">Compare</a>
+        </div>
+
+    </nav>
+
+    <!-- SEARCH SECTION -->
+  <div class="search-section">
+    <h2>Search by Make ID</h2>
+
+    <div class="search-box">
+        <input type="number" id="search" placeholder="Enter Make ID (e.g. 449)">
+        <button onclick="searchVehicle()">Search</button>
+    </div>
+
+    <div id="results"></div>
+</div>
+
+
+    <!-- JS -->
+    <script src="java.js"></script>
+
+</body>
+</html>

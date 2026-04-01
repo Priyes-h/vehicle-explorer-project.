@@ -76,7 +76,7 @@ function searchVehicle() {
 
             console.log(data);
 
-            // ✅ FIXED FIELD NAME
+            
             let filtered = data.Results.filter(car => 
                 car.MakeId === input
             );

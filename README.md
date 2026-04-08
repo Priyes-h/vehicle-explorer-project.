@@ -10,7 +10,6 @@ https://vpic.nhtsa.dot.gov/api/
 
 
 # Features
-. Search vehicles by manufacturer
+. Search vehicles by id
 . View list of models
-. Compare two vehicles
-. Sort models alphabetically
+. dark mode

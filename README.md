@@ -13,3 +13,4 @@ https://vpic.nhtsa.dot.gov/api/
 . Search vehicles by id
 . View list of models
 . dark mode
+. responsive

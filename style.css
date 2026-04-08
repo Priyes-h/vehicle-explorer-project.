@@ -12,7 +12,7 @@ body {
     transition: 0.3s;
 }
 
-/* NAVBAR */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -39,7 +39,6 @@ body {
     color: white;
 }
 
-/* Toggle Button */
 #themeToggle {
     margin-left: 20px;
     padding: 8px 12px;
@@ -50,7 +49,7 @@ body {
     color: white;
 }
 
-/* SEARCH */
+
 .search-section {
     text-align: center;
     margin-top: 80px;
@@ -95,7 +94,7 @@ body {
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
-/* 🌙 DARK MODE */
+
 .dark {
     background: #0d1117;
     color: #e6edf3;

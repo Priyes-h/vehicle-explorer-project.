@@ -74,14 +74,9 @@ function searchVehicle() {
         .then(response => response.json())
         .then(data => {
 
-            console.log(data);
-
-            
             let filtered = data.Results.filter(car => 
                 car.MakeId === input
             );
-
-            console.log("Filtered:", filtered);
 
             if (filtered.length === 0) {
                 results.innerHTML = "<p>No match found</p>";
@@ -104,3 +99,25 @@ function searchVehicle() {
             results.innerHTML = "<p>Error fetching data</p>";
         });
 }
+
+
+
+let toggleBtn = document.getElementById("themeToggle");
+
+// Load saved theme
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    toggleBtn.textContent = "☀️";
+}
+
+toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+        localStorage.setItem("theme", "dark");
+        toggleBtn.textContent = "☀️";
+    } else {
+        localStorage.setItem("theme", "light");
+        toggleBtn.textContent = "🌙";
+    }
+});

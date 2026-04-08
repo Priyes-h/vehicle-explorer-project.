@@ -8,41 +8,35 @@
 </head>
 <body>
 
-
     <nav class="navbar">
         
-
         <div class="nav-left">
             <img src="assests/Gemini_Generated_Image_ko7578ko7578ko75 (1).png" alt="logo" class="logo">
         </div>
-
 
         <div class="nav-center">
             <h1 class="nav-title">Vehicle Explorer</h1>
         </div>
 
-
         <div class="nav-right">
             <a href="#">Home</a>
             <a href="#">Search</a>
             <a href="#">Compare</a>
+            <button id="themeToggle">🌙</button>
         </div>
 
     </nav>
 
+    <div class="search-section">
+        <h2>Search by Make ID</h2>
 
-  <div class="search-section">
-    <h2>Search by Make ID</h2>
+        <div class="search-box">
+            <input type="number" id="search" placeholder="Enter Make ID (e.g. 449)">
+            <button onclick="searchVehicle()">Search</button>
+        </div>
 
-    <div class="search-box">
-        <input type="number" id="search" placeholder="Enter Make ID (e.g. 449)">
-        <button onclick="searchVehicle()">Search</button>
+        <div id="results"></div>
     </div>
-
-    <div id="results"></div>
-</div>
-
-
 
     <script src="java.js"></script>
 

@@ -10,8 +10,8 @@ body {
     min-height: 100vh;
     color: #fff;
     transition: 0.3s;
+    overflow-x: hidden;
 }
-
 
 .navbar {
     display: flex;
@@ -25,7 +25,7 @@ body {
 
 .logo {
     width: 130px;
-    border-radius: 10px;
+    max-width: 100%;
 }
 
 .nav-title {
@@ -49,21 +49,23 @@ body {
     color: white;
 }
 
-
 .search-section {
     text-align: center;
     margin-top: 80px;
+    padding: 0 20px;
 }
 
 .search-box {
     display: flex;
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .search-box input {
     padding: 14px;
     width: 300px;
+    max-width: 100%;
     border-radius: 8px;
     border: none;
 }
@@ -77,23 +79,27 @@ body {
     cursor: pointer;
 }
 
-
 #results {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 40px;
+    gap: 10px;
 }
 
 .card {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     padding: 20px;
-    margin: 15px;
     width: 220px;
+    max-width: 90%;
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: 0.3s;
 }
 
+.card:hover {
+    transform: translateY(-5px);
+}
 
 .dark {
     background: #0d1117;
@@ -112,17 +118,120 @@ body {
 .dark .card {
     background: rgba(0, 0, 0, 0.6);
 }
-.card {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 20px;
-    margin: 15px;
-    width: 220px;
-}
-/* mobile responsiveness */
-@media (max-width: 768px) {
 
-    /* Navbar */
+.credit {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 16px;
+    opacity: 0;
+    animation: fadeSlide 1.5s ease forwards;
+}
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dark .credit {
+    color: #aaa;
+}
+
+.dev-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    padding: 20px;
+}
+
+.dev-card {
+    text-align: center;
+    padding: 40px;
+    border-radius: 20px;
+    width: 400px;
+    max-width: 95%;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+.dev-card:hover {
+    transform: translateY(-8px) scale(1.05);
+}
+
+.dev-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 20%;
+    margin-bottom: 20px;
+    border: 3px solid #e63946;}
+
+.dev-card h2 {
+    font-size: 28px;
+}
+
+.dev-card p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.dev-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;   
+    gap: 10px;         
+}
+.dev-links a {
+    margin: 10px;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: white;
+    background: #e63946;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    display:  inline-block;
+}
+
+.dev-links a:hover {
+    background: #ff4d5a;
+    transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 15px 30px;
+    }
+
+    .card {
+        width: 200px;
+    }
+
+    .dev-card {
+        width: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dev-links {
+        flex-direction: column;   
+        align-items: center;
+    }
+
+    .dev-links a {
+        width: 80%;              
+        text-align: center;
+    }
+
+
     .navbar {
         flex-direction: column;
         gap: 10px;
@@ -136,35 +245,26 @@ body {
 
     .nav-right {
         display: flex;
-        gap: 15px;
         flex-wrap: wrap;
         justify-content: center;
+        gap: 10px;
     }
 
-    /* Search Section */
     .search-section {
         margin-top: 40px;
-        padding: 0 15px;
     }
 
-    /* Search Box */
     .search-box {
         flex-direction: column;
         align-items: center;
-        gap: 12px;
     }
 
-    .search-box input {
+    .search-box input,
+    .search-box button {
         width: 100%;
         max-width: 300px;
     }
 
-    .search-box button {
-        width: 100%;
-        max-width: 200px;
-    }
-
-    /* Cards */
     #results {
         flex-direction: column;
         align-items: center;
@@ -172,131 +272,22 @@ body {
 
     .card {
         width: 90%;
-        max-width: 300px;
     }
-}
-.credit {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 16px;
-    opacity: 0;
-    animation: fadeSlide 1.5s ease forwards;
-}
 
-/* ✨ Animation */
-@keyframes fadeSlide {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+    .dev-card {
+        padding: 25px;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    .dev-card h2 {
+        font-size: 22px;
     }
-}
-.dark .credit {
-    color: #aaa;
-}
-/* credites  */
-/* Developer Page */
-/* .dev-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-}
 
-.dev-card {
-    text-align: center;
-    padding: 30px;
-    border-radius: 15px;
-    width: 300px;
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-    transition: 0.3s;
-}
+    .dev-card p {
+        font-size: 14px;
+    }
 
-.dev-card:hover {
-    transform: scale(1.05);
-}
-
-.dev-img {
-    width: 100px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-}
-
-.dev-links a {
-    margin: 10px;
-    text-decoration: none;
-    color: #e63946;
-    font-weight: bold;
-} */
- .dev-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-    padding: 20px;
-}
-
-
-.dev-card {
-    text-align: center;
-    padding: 40px;
-    border-radius: 20px;
-    width: 400px;          
-    max-width: 90%;
-    background: rgba(255,255,255,0.12);
-    backdrop-filter: blur(15px);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.4);
-    transition: 0.3s;
-}
-
-
-.dev-card:hover {
-    transform: translateY(-10px) scale(1.5);
-}
-
-
-.dev-img {
-    width: 164px;
-    height: 145px;
-    border-radius: 24%;
-    margin-bottom: 20px;
-    border: 3px solid black;}
-
-
-.dev-card h2 {
-    font-size: 28px;          
-    margin-bottom: 10px;
-}
-
-
-.dev-card p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-
-.dev-links {
-    margin-top: 15px;
-}
-
-.dev-links a {
-    margin: 10px;
-    padding: 10px 16px;
-    text-decoration: none;
-    color: white;
-    background: #e63946;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.dev-links a:hover {
-    background: #ff4d5a;
-    transform: scale(2);
+    .dev-img {
+        width: 110px;
+        height: 110px;
+    }
 }

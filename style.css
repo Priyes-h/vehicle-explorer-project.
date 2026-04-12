@@ -197,3 +197,106 @@ body {
 .dark .credit {
     color: #aaa;
 }
+/* credites  */
+/* Developer Page */
+/* .dev-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.dev-card {
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    width: 300px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.dev-card:hover {
+    transform: scale(1.05);
+}
+
+.dev-img {
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.dev-links a {
+    margin: 10px;
+    text-decoration: none;
+    color: #e63946;
+    font-weight: bold;
+} */
+ .dev-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    padding: 20px;
+}
+
+
+.dev-card {
+    text-align: center;
+    padding: 40px;
+    border-radius: 20px;
+    width: 400px;          
+    max-width: 90%;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+
+.dev-card:hover {
+    transform: translateY(-10px) scale(1.5);
+}
+
+
+.dev-img {
+    width: 164px;
+    height: 145px;
+    border-radius: 24%;
+    margin-bottom: 20px;
+    border: 3px solid black;}
+
+
+.dev-card h2 {
+    font-size: 28px;          
+    margin-bottom: 10px;
+}
+
+
+.dev-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+
+.dev-links {
+    margin-top: 15px;
+}
+
+.dev-links a {
+    margin: 10px;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: white;
+    background: #e63946;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.dev-links a:hover {
+    background: #ff4d5a;
+    transform: scale(2);
+}

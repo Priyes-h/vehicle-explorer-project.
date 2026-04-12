@@ -112,3 +112,10 @@ body {
 .dark .card {
     background: rgba(0, 0, 0, 0.6);
 }
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px;
+    width: 220px;
+}

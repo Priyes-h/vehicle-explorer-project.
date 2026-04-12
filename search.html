@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vehicle Explorer - Home</title>
+    <title>Vehicle Explorer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,24 +20,25 @@
 
         <div class="nav-right">
             <a href="index.html">Home</a>
-            <a href="search.html">Search</a>
+            <a href="#">Search</a>
+            <a href="#">Compare</a>
             <button id="themeToggle">🌙</button>
         </div>
 
     </nav>
 
     <div class="search-section">
-        <h2>All Vehicles</h2>
+        <h2>Search by Make ID</h2>
 
         <div class="search-box">
+            <input type="number" id="search" placeholder="Enter Make ID (e.g. 449)">
+            <button onclick="searchVehicle()">Search</button>
         </div>
-        <div class="search-box">
-<button onclick="toggleSort()" id="sortBtn">Sort A → Z</button>
-</div>
 
         <div id="results"></div>
     </div>
 
-    <script src="home.js"></script>
+    <script src="java.js"></script>
+
 </body>
 </html>

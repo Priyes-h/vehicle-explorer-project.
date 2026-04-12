@@ -175,3 +175,25 @@ body {
         max-width: 300px;
     }
 }
+.credit {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 16px;
+    opacity: 0;
+    animation: fadeSlide 1.5s ease forwards;
+}
+
+/* ✨ Animation */
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.dark .credit {
+    color: #aaa;
+}
